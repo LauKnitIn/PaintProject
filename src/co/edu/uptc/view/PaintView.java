@@ -34,7 +34,7 @@ public class PaintView extends JFrame {
 
     private void addToolBar(){
         this.toolSection = new VerticalToolbar();
-        this.add(this.toolSection,BorderLayout.NORTH);
+        this.add(this.toolSection,BorderLayout.WEST);
     }
 
     public void toggleToolbarPosition() {
