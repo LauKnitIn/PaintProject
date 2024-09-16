@@ -2,7 +2,10 @@ package co.edu.uptc.view;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
+
+import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
@@ -23,10 +26,11 @@ public class VerticalToolbar extends JPanel {
     };
 
     public VerticalToolbar() {
-        setPreferredSize(new Dimension(120, 100)); 
+        setPreferredSize(new Dimension(200, 100)); 
         setBackground(this.backgroundColor);
-        setLayout(new GridLayout(4, 1, 100 ,100));
-        setBounds(0, 0, 200, 200); 
+        FlowLayout layout = new FlowLayout(FlowLayout.CENTER);
+        layout.setVgap(10);
+        setLayout(layout);
         initComponents();
     }
 
@@ -38,6 +42,7 @@ public class VerticalToolbar extends JPanel {
     private void createButtons(){
         for (int i = 0; i < this.BUTTON_NAMES.length; i++) {
             JButton option = new JButton(this.BUTTON_NAMES[i]);
+            option.setPreferredSize(new Dimension(150,25));
                 JPopupMenu options = createButtonOptions(this.BUTTON_OPTIONS[i]);
                 createButtonAction(option, options);
                 add(option); 
