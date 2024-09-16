@@ -6,7 +6,9 @@ import javax.swing.JFrame;
 public class PaintView extends JFrame {
 
     private DrawingArea drawSection;
-    private ToolBarView toolSection;
+    private VerticalToolbar toolSection;
+    private boolean isToolbarOnLeft = true; 
+
 
     public PaintView() {
         setSize(1000, 800);
@@ -31,8 +33,22 @@ public class PaintView extends JFrame {
     }
 
     private void addToolBar(){
-        this.toolSection = new ToolBarView();
+        this.toolSection = new VerticalToolbar();
         this.add(this.toolSection,BorderLayout.NORTH);
+    }
+
+    public void toggleToolbarPosition() {
+        this.remove(this.toolSection);
+
+        if (isToolbarOnLeft) {
+            this.add(this.toolSection, BorderLayout.EAST);
+        } else {
+            this.add(this.toolSection, BorderLayout.WEST);
+        }
+
+        isToolbarOnLeft = !isToolbarOnLeft;
+        this.revalidate();
+        this.repaint();
     }
 
     private void addStatusBar(){
