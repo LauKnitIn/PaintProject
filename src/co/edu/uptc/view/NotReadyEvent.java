@@ -1,15 +1,24 @@
 package co.edu.uptc.view;
 
 import java.awt.BorderLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 
 public class NotReadyEvent implements ActionListener{
 
+    private ImageIcon windowIcon;
+
+    public NotReadyEvent(){
+        this.windowIcon = new ImageIcon("src/co/edu/uptc/IMG/Alerta.png");
+    }
+
     private void addNotReadyMessage(){
         JDialog alert = new JDialog();
+        alert.setIconImage(this.windowIcon.getImage().getScaledInstance(10, 10, Image.SCALE_SMOOTH));
         alert.setLayout(new BorderLayout());
         alert.setLayout(null);
         alert.setSize(350, 350);
@@ -24,9 +33,5 @@ public class NotReadyEvent implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         addNotReadyMessage();
     }
-
-
-
-
     
 }

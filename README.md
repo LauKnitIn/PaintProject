@@ -22,9 +22,13 @@
  - Tamaño recomendado 14
 
 ## Información del proyecto
+-  Este proyecto contiene la implementacion de diseño de GUI para un mini-paint **no funcional** (por el momento).
+
+-  La version 0.3.0 contiene una barra de herramientas con iconos que mejoran la UX
+- Las ventanas emergentes posibles cuentan con iconos que mejoran su apariencia al usuario
 
 - **Versión minima**
-   - Este proyecto requiere [] para compilar y ejecutar
+   - Este proyecto requiere [-] para compilar y ejecutar
 
 - **Comando para ejecutar el programa** 
     -  **Es necesario que navegues al directorio que contiene al archivo y especifiques su ruta** usando el siguiente comando en cmd:
@@ -32,5 +36,4 @@
    -  java -jar "/ruta/al/archivo.jar"
 
 ## Colaboradores
- - **Juan Pablo Martinez** 
- - **Laura Correa** 
+ - **Laura Correa - 202310254** 
