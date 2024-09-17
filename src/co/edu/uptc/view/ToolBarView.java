@@ -12,7 +12,7 @@ public class ToolBarView extends JPanel{
     private final Color backgroundColor = new Color(217, 217, 217);
     private final Font textFont = new Font("Arial", Font.PLAIN, 14);
     private JToolBar toolsBar;
-    private final String [] menuIcons = {"/src/co/edu/uptc/IMG/engranaje.png", "src/co/edu/uptc/IMG/tools.png","src/co/edu/uptc/IMG/info.png"};
+    private final String [] menuIcons = {"/co/edu/uptc/Resources/IMG/engranaje.png", "/co/edu/uptc/Resources/IMG/tools.png","/co/edu/uptc/Resources/IMG/info.png"};
     private final String [][] ITEMS_NAMES = {
         {"Color", "Limpiar","Salir"},
         {"Linea","Circulo","Rectangulo"},
@@ -42,7 +42,7 @@ public class ToolBarView extends JPanel{
         for (String buttonName : this.menuIcons) {
             JButton option =  new JButton();
             option.setBorder(new BevelBorder(BevelBorder.RAISED, Color.lightGray, Color.darkGray));
-            ImageIcon IMG = new ImageIcon(buttonName);
+            ImageIcon IMG = new ImageIcon(getClass().getResource(buttonName));
             option.setIcon(new ImageIcon(IMG.getImage().getScaledInstance(40,35, Image.SCALE_SMOOTH)));
             option.setOpaque(true);
             this.toolsBar.add(option);

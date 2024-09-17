@@ -13,7 +13,7 @@ public class NotReadyEvent implements ActionListener{
     private ImageIcon windowIcon;
 
     public NotReadyEvent(){
-        this.windowIcon = new ImageIcon("src/co/edu/uptc/IMG/Alerta.png");
+        this.windowIcon = new ImageIcon(getClass().getResource("/co/edu/uptc/Resources/IMG/Alerta.png"));
     }
 
     private void addNotReadyMessage(){
