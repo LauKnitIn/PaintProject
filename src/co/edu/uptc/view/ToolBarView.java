@@ -34,15 +34,18 @@ public class ToolBarView extends JPanel{
     private void addMenuBar(){
         this.toolsBar = new JToolBar(JToolBar.HORIZONTAL);
         this.toolsBar.setRollover(true);
+        System.out.println("11111");
         createButtons();
         add(this.toolsBar);
     }
 
     private void createButtons(){
         for (String buttonName : this.menuIcons) {
+            System.out.println("DIREC:" + buttonName);
             JButton option =  new JButton();
             option.setBorder(new BevelBorder(BevelBorder.RAISED, Color.lightGray, Color.darkGray));
             ImageIcon IMG = new ImageIcon(getClass().getResource(buttonName));
+            //ImageIcon IMG = new ImageIcon("C:\\Users\\LENOVO\\Documents\\Universidad\\4° Semester\\Programacion II\\PaintProject\\Project\\src\\co\\edu\\uptc\\Resources\\IMG\\Alerta.png");
             option.setIcon(new ImageIcon(IMG.getImage().getScaledInstance(40,35, Image.SCALE_SMOOTH)));
             option.setOpaque(true);
             this.toolsBar.add(option);
