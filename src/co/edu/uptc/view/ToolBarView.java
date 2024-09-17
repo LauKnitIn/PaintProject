@@ -12,7 +12,7 @@ public class ToolBarView extends JPanel{
     private final Color backgroundColor = new Color(217, 217, 217);
     private final Font textFont = new Font("Arial", Font.PLAIN, 14);
     private JToolBar toolsBar;
-    private final String [] menuIcons = {"/co/edu/uptc/Resources/IMG/engranaje.png", "/co/edu/uptc/Resources/IMG/tools.png","/co/edu/uptc/Resources/IMG/info.png"};
+    private final String [] menuIcons = {"/Resources/IMG/engranaje.png", "/Resources/IMG/tools.png","/Resources/IMG/info.png"};
     private final String [][] ITEMS_NAMES = {
         {"Color", "Limpiar","Salir"},
         {"Linea","Circulo","Rectangulo"},
@@ -44,8 +44,10 @@ public class ToolBarView extends JPanel{
             System.out.println("DIREC:" + buttonName);
             JButton option =  new JButton();
             option.setBorder(new BevelBorder(BevelBorder.RAISED, Color.lightGray, Color.darkGray));
-            ImageIcon IMG = new ImageIcon(getClass().getResource(buttonName));
-            //ImageIcon IMG = new ImageIcon("C:\\Users\\LENOVO\\Documents\\Universidad\\4° Semester\\Programacion II\\PaintProject\\Project\\src\\co\\edu\\uptc\\Resources\\IMG\\Alerta.png");
+            String currentDir = System.getProperty("user.dir");
+            System.out.println(currentDir+buttonName);
+            ImageIcon IMG = new ImageIcon(currentDir+buttonName);
+         //   ImageIcon IMG = new ImageIcon("C:/Users/LENOVO/Documents/Universidad/4° Semester/Programacion II/PaintProject/Project/src/co/edu/uptc/Resources/IMG/info.png");
             option.setIcon(new ImageIcon(IMG.getImage().getScaledInstance(40,35, Image.SCALE_SMOOTH)));
             option.setOpaque(true);
             this.toolsBar.add(option);
