@@ -6,7 +6,6 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.accessibility.AccessibleRelation;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -23,7 +22,8 @@ public class AboutView extends JDialog {
     private final String [] LABELS_NAME = {"Mini-Paint","V0.3.0", "Aplicación de dibujo","Laura Correa","17/09/2024"};
 
     public AboutView(){
-        this.windowIcon = new ImageIcon(getClass().getResource("/co/edu/uptc/Resources/IMG/info.png"));
+        String currentDir = System.getProperty("user.dir");
+        this.windowIcon = new ImageIcon( currentDir + "/Resources/IMG/info.png");
         this.YcordinateCount = 10;
         setLayout(new GridLayout(6,1));
         setSize((new Dimension(this.SIZE, this.SIZE)));
