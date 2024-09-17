@@ -23,6 +23,7 @@ public class ToolBarView extends JPanel{
         setLayout(new FlowLayout(FlowLayout.LEFT));
         setBackground(this.backgroundColor);
         setBounds(0,0,1000,20);
+        setFocusable(true);
         initComponents();
     }
 
@@ -35,7 +36,6 @@ public class ToolBarView extends JPanel{
         this.toolsBar.setRollover(true);
         createButtons();
         add(this.toolsBar);
-        //addButtons();
     }
 
     private void createButtons(){
@@ -60,9 +60,19 @@ public class ToolBarView extends JPanel{
         JPopupMenu options = new JPopupMenu();
        for (String name : optionsName) {
             JMenuItem option = new JMenuItem(name);
+            option.setActionCommand(name.toUpperCase());
+            assignOptionsAction(option);
              options.add(option);
        }
        showMenu(optionButton, options);
+    }
+
+    private void assignOptionsAction(JMenuItem option){
+        if (option.getActionCommand().equals("CONOCE DEL PROYECTO")) {
+            option.addActionListener(new InfoEvent());
+        }else{
+            option.addActionListener(new NotReadyEvent());
+        }
     }
 
     private void showMenu(JButton option, JPopupMenu options){

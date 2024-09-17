@@ -5,11 +5,12 @@ import java.awt.event.KeyListener;
 
 public class HideToolBarEvent implements KeyListener{
 
-    private ToolBarView c;
+  private ToolBarView toolsCopy;
 
-    public HideToolBarEvent(ToolBarView invoker){
-        this.c = invoker;
+    public HideToolBarEvent(ToolBarView toolBar){
+      this.toolsCopy = toolBar;
     }
+
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -17,9 +18,7 @@ public class HideToolBarEvent implements KeyListener{
 
     @Override
     public void keyReleased(KeyEvent e) {
-       if(e.getKeyCode() == (KeyEvent.VK_F11)){
-         this.c.removeAll();
-       }
+      this.toolsCopy.setVisible(!this.toolsCopy.isVisible());
     }
 
     @Override

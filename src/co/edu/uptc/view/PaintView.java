@@ -15,7 +15,10 @@ public class PaintView extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBackground(Color.WHITE);
         setTitle("Mini - paint");
+        setFocusable(true);
+        requestFocusInWindow();
         initComponents();
+        addKeyListener(new HideToolBarEvent(this.toolSection));
         setVisible(true);
     }
 
