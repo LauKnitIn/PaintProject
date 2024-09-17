@@ -18,7 +18,9 @@ public class HideToolBarEvent implements KeyListener{
 
     @Override
     public void keyReleased(KeyEvent e) {
-      this.toolsCopy.setVisible(!this.toolsCopy.isVisible());
+      if (e.getKeyCode() == KeyEvent.VK_F11) {
+        this.toolsCopy.setVisible(!this.toolsCopy.isVisible());
+      }
     }
 
     @Override

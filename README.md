@@ -26,6 +26,7 @@
 
 -  La version 0.3.0 contiene una barra de herramientas con iconos que mejoran la UX
 - Las ventanas emergentes posibles cuentan con iconos que mejoran su apariencia al usuario
+- Minimizar la barra de herramientas con la tecla F11
 
 - **Versión minima**
    - Este proyecto requiere [-] para compilar y ejecutar
