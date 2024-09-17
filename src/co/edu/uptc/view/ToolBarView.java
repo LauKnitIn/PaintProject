@@ -12,7 +12,7 @@ public class ToolBarView extends JPanel{
     private final Color backgroundColor = new Color(217, 217, 217);
     private final Font textFont = new Font("Arial", Font.PLAIN, 14);
     private JToolBar toolsBar;
-    private final String [] menuIcons = {"src/co/edu/uptc/IMG/engranaje.png", "src/co/edu/uptc/IMG/tools.png","src/co/edu/uptc/IMG/info.png"};
+    private final String [] menuIcons = {"/src/co/edu/uptc/IMG/engranaje.png", "src/co/edu/uptc/IMG/tools.png","src/co/edu/uptc/IMG/info.png"};
     private final String [][] ITEMS_NAMES = {
         {"Color", "Limpiar","Salir"},
         {"Linea","Circulo","Rectangulo"},
