@@ -43,7 +43,7 @@ public class ToolBarView extends JPanel{
             JButton option =  new JButton();
             option.setBorder(new BevelBorder(BevelBorder.RAISED, Color.lightGray, Color.darkGray));
             String currentDir = System.getProperty("user.dir");
-            ImageIcon IMG = new ImageIcon(currentDir+buttonName);
+            ImageIcon IMG = new ImageIcon(currentDir + buttonName);
             option.setIcon(new ImageIcon(IMG.getImage().getScaledInstance(40,35, Image.SCALE_SMOOTH)));
             option.setOpaque(true);
             this.toolsBar.add(option);
